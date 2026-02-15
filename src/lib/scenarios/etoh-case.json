@@ -1,0 +1,262 @@
+{
+  "id": "etoh-lgib-dka",
+  "title": "EtOH: LGIB, Ketoacidosis & Wernicke's Risk",
+
+  "patient": {
+    "name": "Robert Malloy",
+    "age": 47,
+    "sex": "M",
+    "personality": "Cooperative but guarded about alcohol use. Becomes more forthcoming if asked directly and without judgment.",
+    "chiefComplaint": "Vomiting and rectal bleeding",
+    "presentingNarrative": "EMS brings in a cachectic 47-year-old male found vomiting with reports of bright red blood per rectum. He appears malnourished and in mild distress.",
+    "history": {
+      "hpiDetails": "Started vomiting 2 days ago. Noticed bright red blood in toilet this morning after a bowel movement. Has had 4-5 episodes of BRBPR today. Denies abdominal pain but endorses generalized weakness and dizziness.",
+      "alcoholUse": "Drinks a fifth of vodka daily for 15+ years. Last drink was yesterday. Has never been to rehab.",
+      "nsaidUse": "Occasional ibuprofen for headaches, not chronic.",
+      "medications": "None",
+      "allergies": "NKDA",
+      "pmh": "No prior hospitalizations. No known diabetes. No prior GI bleeds.",
+      "socialHistory": "Homeless, sleeps in shelters. Smokes 1ppd x 20 years. No IV drug use.",
+      "familyHistory": "Unknown — lost contact with family.",
+      "dietaryHistory": "Eats irregularly from shelters and food banks. Primarily liquid calories from alcohol."
+    },
+    "physicalExamFindings": {
+      "general": "Cachectic male appearing older than stated age, mild distress, malodorous",
+      "heent": "Dry mucous membranes, scleral icterus, poor dentition",
+      "cardiovascular": "Tachycardic, regular rhythm, no murmurs",
+      "pulmonary": "Clear to auscultation bilaterally, tachypneic",
+      "abdomen": "Soft, mild diffuse tenderness, no rebound/guarding, hyperactive bowel sounds, no hepatomegaly",
+      "rectal": "Bright red blood on exam, no external hemorrhoids visible, no masses",
+      "extremities": "Muscle wasting, no edema",
+      "neuro": "Alert and oriented x3, no focal deficits, no asterixis, no nystagmus (initially)",
+      "skin": "Poor turgor, spider angiomata on chest, palmar erythema, no jaundice"
+    },
+    "initialVitals": { "hr": 105, "bp": "102/68", "rr": 22, "temp": 37.2, "spo2": 96 }
+  },
+
+  "labs": {
+    "CBC": { "values": { "WCC": "14 x10^9/L", "Hb": "12 g/dL", "Plt": "295 x10^9/L", "MCV": "104 fL" }, "turnaroundMinutes": 30 },
+    "BMP": { "values": { "Na": 125, "K": 4.8, "Cl": 73, "HCO3": 13, "BUN": 46, "Cr": 1.32, "Glucose": 132 }, "turnaroundMinutes": 30 },
+    "HbA1c": { "values": { "HbA1c": "5.1%" }, "turnaroundMinutes": 60 },
+    "LFTs": { "values": { "AST": 185, "ALT": 78, "ALP": 110, "Tbili": 2.1, "Albumin": 2.4 }, "turnaroundMinutes": 30 },
+    "Lipase": { "values": { "Lipase": 45 }, "turnaroundMinutes": 30 },
+    "Lactate": { "values": { "Lactate": 3.2 }, "turnaroundMinutes": 15 },
+    "ABG": { "values": { "pH": 7.28, "pCO2": 28, "pO2": 92, "HCO3": 13 }, "turnaroundMinutes": 15 },
+    "Coags": { "values": { "PT": 16.2, "INR": 1.4, "PTT": 34 }, "turnaroundMinutes": 30 },
+    "TypeAndScreen": { "values": { "type": "O positive", "screen": "negative" }, "turnaroundMinutes": 45 },
+    "Magnesium": { "values": { "Mg": 1.4 }, "turnaroundMinutes": 30 },
+    "Phosphorus": { "values": { "Phos": 2.0 }, "turnaroundMinutes": 30 },
+    "EthanolLevel": { "values": { "EtOH": 45 }, "turnaroundMinutes": 30 },
+    "BOHB": { "values": { "BOHB": 11.67 }, "turnaroundMinutes": 45 },
+    "Osmolality": { "values": { "Osm": 293 }, "turnaroundMinutes": 30 },
+    "Prealbumin": { "values": { "Prealbumin": 5 }, "turnaroundMinutes": 60 },
+    "Thiamine_level": { "values": { "Thiamine": "low" }, "turnaroundMinutes": 120 },
+    "UA": { "values": { "ketones": "3+", "blood": "negative", "protein": "trace" }, "turnaroundMinutes": 20 }
+  },
+
+  "labsOverTime": {
+    "CBC": [
+      { "afterMinutes": 120, "ifTreated": true, "values": { "WCC": 12, "Hb": 11.8, "Plt": 290 } },
+      { "afterMinutes": 120, "ifTreated": false, "values": { "WCC": 15, "Hb": 10.5, "Plt": 280 } },
+      { "afterMinutes": 360, "ifTreated": false, "values": { "WCC": 18, "Hb": 8.2, "Plt": 265 } }
+    ],
+    "BMP": [
+      { "afterMinutes": 240, "ifTreated": true, "values": { "Na": 130, "K": 4.2, "Cl": 78, "HCO3": 18, "BUN": 38, "Cr": 1.18, "Glucose": 110 } },
+      { "afterMinutes": 240, "ifTreated": false, "values": { "Na": 122, "K": 5.4, "Cl": 70, "HCO3": 9, "BUN": 52, "Cr": 1.55, "Glucose": 85 } }
+    ]
+  },
+
+  "consults": {
+    "GI": { "responseDelayMinutes": 45, "outcome": "GI agrees to bedside sigmoidoscopy" },
+    "ICU": { "responseDelayMinutes": 20, "outcome": "ICU accepts for monitoring" },
+    "Nutrition": { "responseDelayMinutes": 60, "outcome": "Nutrition recommends TPN evaluation" }
+  },
+
+  "procedures": {
+    "intubation": { "durationMinutes": 15, "requirements": ["patient indicated for intubation"] },
+    "central_line": { "durationMinutes": 30, "requirements": [] },
+    "sigmoidoscopy": { "durationMinutes": 45, "requirements": ["GI consult placed"], "outcome": "Hemorrhoids identified as bleeding source" }
+  },
+
+  "conditions": [
+    {
+      "id": "lgib",
+      "name": "Lower GI Bleed",
+      "initialState": "presenting",
+      "states": ["presenting", "workup", "treated", "resolved", "resolved_spontaneous"],
+      "transitions": [
+        {
+          "from": "presenting",
+          "to": "workup",
+          "trigger": { "type": "any_action", "actions": ["order_lab:CBC", "order_lab:TypeAndScreen"] }
+        },
+        {
+          "from": ["presenting", "workup"],
+          "to": "treated",
+          "trigger": { "type": "all_actions", "actions": ["start_treatment:PPI", "consult:GI"] }
+        },
+        {
+          "from": "treated",
+          "to": "resolved",
+          "trigger": { "type": "procedure_completed", "procedure": "sigmoidoscopy" }
+        },
+        {
+          "from": "presenting",
+          "to": "resolved_spontaneous",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 720 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 25,
+        "criteria": [
+          { "type": "action_taken", "action": "order_lab:CBC", "points": 3, "label": "Ordered CBC (trend H/H)" },
+          { "type": "action_taken", "action": "order_lab:TypeAndScreen", "points": 5, "label": "Type & Screen" },
+          { "type": "action_taken", "action": "start_treatment:PPI", "points": 7, "label": "Started PPI" },
+          { "type": "action_taken", "action": "consult:GI", "points": 5, "label": "Consulted GI" },
+          { "type": "state_avoided", "state": "resolved_spontaneous", "points": 5, "label": "Actively managed bleed (didn't let it self-resolve)" }
+        ]
+      }
+    },
+    {
+      "id": "ketoacidosis",
+      "name": "DKA vs EtOH Ketoacidosis",
+      "initialState": "presenting",
+      "states": ["presenting", "workup", "treated", "resolving", "worsening", "critical"],
+      "transitions": [
+        {
+          "from": "presenting",
+          "to": "workup",
+          "trigger": { "type": "any_action", "actions": ["order_lab:HbA1c", "order_lab:BOHB", "order_lab:ABG"] }
+        },
+        {
+          "from": ["presenting", "workup"],
+          "to": "treated",
+          "trigger": { "type": "any_action", "actions": ["start_treatment:D5NS_20KCL", "start_treatment:IVF_dextrose"] }
+        },
+        {
+          "from": "treated",
+          "to": "resolving",
+          "trigger": { "type": "time_elapsed_in_state", "afterMinutes": 240 }
+        },
+        {
+          "from": ["presenting", "workup"],
+          "to": "worsening",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 360 }
+        },
+        {
+          "from": "worsening",
+          "to": "treated",
+          "trigger": { "type": "any_action", "actions": ["start_treatment:D5NS_20KCL", "start_treatment:IVF_dextrose"] }
+        },
+        {
+          "from": "worsening",
+          "to": "critical",
+          "trigger": { "type": "time_elapsed_in_state", "afterMinutes": 240 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 40,
+        "criteria": [
+          { "type": "action_taken", "action": "order_lab:HbA1c", "points": 8, "label": "Ordered HbA1c (differentiate DKA vs EtOH)" },
+          { "type": "action_taken", "action": "order_lab:BOHB", "points": 5, "label": "Ordered beta-hydroxybutyrate" },
+          { "type": "action_taken", "action": "start_treatment:D5NS_20KCL", "points": 12, "label": "Appropriate IVF (D5NS+20KCL)" },
+          { "type": "action_taken_within", "action": "start_treatment:D5NS_20KCL", "withinMinutes": 120, "points": 5, "label": "IVF started within 2 hours" },
+          { "type": "state_avoided", "state": "critical", "points": 10, "label": "Avoided intubation/aspiration" }
+        ]
+      }
+    },
+    {
+      "id": "etoh_malnutrition",
+      "name": "Chronic EtOH & Severe Malnutrition",
+      "initialState": "at_risk",
+      "states": ["at_risk", "supplemented", "resolving", "wernickes_developing", "wernickes"],
+      "transitions": [
+        {
+          "from": "at_risk",
+          "to": "supplemented",
+          "trigger": { "type": "action_taken", "actions": ["start_treatment:thiamine_high_dose"] }
+        },
+        {
+          "from": "supplemented",
+          "to": "resolving",
+          "trigger": { "type": "time_elapsed_in_state", "afterMinutes": 480 }
+        },
+        {
+          "from": "at_risk",
+          "to": "wernickes_developing",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 360 }
+        },
+        {
+          "from": "wernickes_developing",
+          "to": "supplemented",
+          "trigger": { "type": "action_taken", "actions": ["start_treatment:thiamine_high_dose"] }
+        },
+        {
+          "from": "wernickes_developing",
+          "to": "wernickes",
+          "trigger": { "type": "time_elapsed_in_state", "afterMinutes": 120 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 35,
+        "criteria": [
+          { "type": "action_taken_within", "action": "start_treatment:thiamine_high_dose", "withinMinutes": 60, "points": 15, "label": "High-dose thiamine within 1 hour" },
+          { "type": "action_taken", "action": "start_treatment:folic_acid", "points": 5, "label": "Folic acid" },
+          { "type": "action_taken", "action": "start_treatment:multivitamin", "points": 5, "label": "Multivitamin" },
+          { "type": "state_avoided", "state": "wernickes", "points": 10, "label": "Prevented Wernicke's encephalopathy" }
+        ]
+      }
+    }
+  ],
+
+  "events": [
+    {
+      "id": "initial_presentation",
+      "trigger": { "type": "game_start" },
+      "facts": "EMS wheels in the patient. He is on a gurney, appearing malnourished and uncomfortable. Nurse hands you the triage vitals sheet."
+    },
+    {
+      "id": "initial_labs_available",
+      "trigger": { "type": "time_elapsed", "atMinute": 0 },
+      "facts": "The triage nurse already drew initial labs (CBC, BMP) and they are processing."
+    },
+    {
+      "id": "hb_drop_alert",
+      "trigger": { "type": "condition_in_state", "condition": "lgib", "state": "presenting", "afterMinutes": 180 },
+      "facts": "Nurse reports the patient just had another large bloody bowel movement. He appears more pale.",
+      "vitalsChange": { "hr": 115, "bp": "92/58" }
+    },
+    {
+      "id": "ketoacidosis_worsening_signs",
+      "trigger": { "type": "condition_enters_state", "condition": "ketoacidosis", "state": "worsening" },
+      "facts": "The patient is becoming drowsy and confused. Kussmaul breathing noted. He is no longer answering questions coherently.",
+      "vitalsChange": { "rr": 28, "spo2": 94 }
+    },
+    {
+      "id": "ketoacidosis_critical",
+      "trigger": { "type": "condition_enters_state", "condition": "ketoacidosis", "state": "critical" },
+      "facts": "Patient is obtunded. GCS drops to 8. Vomits and aspirates. O2 sat plummeting. Requires immediate intubation.",
+      "vitalsChange": { "spo2": 82, "hr": 135, "bp": "85/50" },
+      "requiredResponse": { "actions": ["procedure:intubation"], "windowMinutes": 10 },
+      "ifNotAddressed": { "outcome": "cardiac_arrest" }
+    },
+    {
+      "id": "wernickes_onset",
+      "trigger": { "type": "condition_enters_state", "condition": "etoh_malnutrition", "state": "wernickes" },
+      "facts": "Patient develops horizontal nystagmus, gait ataxia (cannot walk straight), and becomes confused with anterograde amnesia. Classic Wernicke's triad."
+    },
+    {
+      "id": "gi_consult_arrives",
+      "trigger": { "type": "consult_response", "consult": "GI" },
+      "facts": "The GI fellow arrives and reviews the case. They recommend bedside sigmoidoscopy. They ask if the patient is hemodynamically stable enough to proceed."
+    }
+  ],
+
+  "scoredHistoryItems": [
+    { "id": "asked_about_alcohol", "keywords": ["alcohol", "drink", "etoh", "booze", "liquor", "vodka", "beer", "wine"], "points": 5, "label": "Asked about alcohol use" },
+    { "id": "asked_about_nsaids", "keywords": ["nsaid", "ibuprofen", "aspirin", "advil", "motrin", "naproxen", "anti-inflammatory"], "points": 3, "label": "Asked about NSAID use" },
+    { "id": "asked_about_diet", "keywords": ["diet", "eat", "food", "nutrition", "meal"], "points": 3, "label": "Asked about dietary history" },
+    { "id": "asked_about_medications", "keywords": ["medication", "medicine", "pills", "prescription", "drugs"], "points": 2, "label": "Asked about medications" },
+    { "id": "asked_about_prior_bleeds", "keywords": ["bleed", "blood before", "happened before", "prior episode", "previous"], "points": 2, "label": "Asked about prior GI bleeds" }
+  ]
+}
