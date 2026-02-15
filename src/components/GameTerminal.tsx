@@ -116,7 +116,11 @@ export default function GameTerminal({
         setSimTime(data.simTime);
         setLastSyncTime(Date.now());
 
-        if (data.narrative) {
+        if (data.messages && data.messages.length > 0) {
+          for (const msg of data.messages) {
+            addEntry(msg.role, msg.message, data.simTime);
+          }
+        } else if (data.narrative) {
           addEntry("alert", data.narrative, data.simTime);
         }
       } catch {

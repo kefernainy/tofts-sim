@@ -123,3 +123,7 @@ Required in `.env.local`:
 DATABASE_URL=postgresql://...?sslmode=require   # Neon Postgres connection string
 ANTHROPIC_API_KEY=sk-ant-xxx                     # Read automatically by @anthropic-ai/sdk
 ```
+
+## Preferences
+
+- When committing, always use `git add -A` to stage all files and push to remote after committing.

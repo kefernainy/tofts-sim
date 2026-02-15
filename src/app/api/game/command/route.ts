@@ -11,6 +11,7 @@ import {
 import { parseCommand } from "@/lib/llm/parse-command";
 import { callGameMaster } from "@/lib/llm/game-master";
 import { formatVitals } from "@/lib/llm/prompts";
+import { applyVitalsNoise } from "@/lib/engine/vitals-noise";
 
 export async function POST(request: Request) {
   try {
@@ -157,13 +158,16 @@ export async function POST(request: Request) {
     await saveState(state, now);
     await writeLog(session.id, state.simTime, allMessages);
 
+    // Apply vitals noise to display (not saved to DB)
+    const displayVitals = applyVitalsNoise(state.vitals, state.conditionStates);
+
     return NextResponse.json({
       narrative: responseNarrative,
-      vitals: state.vitals,
+      vitals: displayVitals,
       simTime: state.simTime,
       alerts: ctx.alerts,
       gameOver: false,
-      formattedVitals: formatVitals(state.vitals),
+      formattedVitals: formatVitals(displayVitals),
     });
   } catch (error) {
     console.error("Game command error:", error);

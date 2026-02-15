@@ -40,6 +40,8 @@ export async function POST(request: Request) {
         activeTreatments: [],
         firedEvents: ["initial_presentation"],
         revealedHistory: [],
+        lastAmbientSimTime: 0,
+        recentAmbient: [],
       })
       .returning();
 

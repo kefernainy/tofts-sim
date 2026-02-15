@@ -359,19 +359,30 @@ export async function executeAction(
 /**
  * Save updated game state back to the database.
  */
-export async function saveState(state: GameState, now: Date = new Date()) {
+export async function saveState(
+  state: GameState,
+  now: Date = new Date(),
+  ambientUpdate?: { lastAmbientSimTime: number; recentAmbient: string[] }
+) {
+  const updates: Record<string, unknown> = {
+    simTime: state.simTime,
+    vitals: state.vitals,
+    conditionStates: state.conditionStates,
+    activeTreatments: state.activeTreatments,
+    firedEvents: state.firedEvents,
+    revealedHistory: state.revealedHistory,
+    lastTickRealTime: now,
+    status: state.status,
+  };
+
+  if (ambientUpdate) {
+    updates.lastAmbientSimTime = ambientUpdate.lastAmbientSimTime;
+    updates.recentAmbient = ambientUpdate.recentAmbient;
+  }
+
   await db
     .update(gameSessions)
-    .set({
-      simTime: state.simTime,
-      vitals: state.vitals,
-      conditionStates: state.conditionStates,
-      activeTreatments: state.activeTreatments,
-      firedEvents: state.firedEvents,
-      revealedHistory: state.revealedHistory,
-      lastTickRealTime: now,
-      status: state.status,
-    })
+    .set(updates)
     .where(eq(gameSessions.id, state.sessionId));
 }
 

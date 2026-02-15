@@ -22,6 +22,8 @@ export const gameSessions = pgTable("game_sessions", {
   activeTreatments: jsonb("active_treatments").notNull().default([]),
   firedEvents: jsonb("fired_events").notNull().default([]),
   revealedHistory: jsonb("revealed_history").notNull().default([]),
+  lastAmbientSimTime: integer("last_ambient_sim_time").notNull().default(0),
+  recentAmbient: jsonb("recent_ambient").notNull().default([]),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
