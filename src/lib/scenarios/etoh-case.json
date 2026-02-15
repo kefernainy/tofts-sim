@@ -2,6 +2,17 @@
   "id": "etoh-lgib-dka",
   "title": "EtOH: LGIB, Ketoacidosis & Wernicke's Risk",
 
+  "treatmentKeys": {
+    "PPI": "Proton Pump Inhibitor (IV Pantoprazole 40mg BID)",
+    "D5NS_20KCL": "D5NS + 20mEq KCL @ 150mL/hr",
+    "IVF_dextrose": "IV Fluids with Dextrose",
+    "thiamine_high_dose": "Thiamine 500mg IV q8h (high-dose)",
+    "folic_acid": "Folic Acid 1mg PO daily",
+    "multivitamin": "Multivitamin IV daily",
+    "banana_bag": "Banana Bag (MVI + Thiamine + Folate in NS)",
+    "NS_bolus": "Normal Saline 1L bolus"
+  },
+
   "patient": {
     "name": "Robert Malloy",
     "age": 47,

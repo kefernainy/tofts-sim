@@ -418,27 +418,19 @@ export function checkHistoryReveals(
 
 // Helpers
 
-function isConditionTreated(state: GameState, labKey: string): boolean {
-  // Heuristic: if the related condition is in a "treated" or better state
-  if (
-    labKey === "CBC" &&
-    ["treated", "resolved"].includes(state.conditionStates["lgib"] ?? "")
-  ) {
-    return true;
-  }
-  if (
-    labKey === "BMP" &&
-    ["treated", "resolving"].includes(
-      state.conditionStates["ketoacidosis"] ?? ""
-    )
-  ) {
-    return true;
+function isConditionTreated(state: GameState, _labKey: string): boolean {
+  // Generic heuristic: check if ANY condition is in a treated/resolved/resolving state
+  for (const condState of Object.values(state.conditionStates)) {
+    if (["treated", "resolved", "resolving", "responding"].includes(condState)) {
+      return true;
+    }
   }
   return false;
 }
 
 function formatTreatmentName(key: string): string {
   const names: Record<string, string> = {
+    // EtOH case treatments
     PPI: "Proton Pump Inhibitor (IV Pantoprazole 40mg BID)",
     D5NS_20KCL: "D5NS + 20mEq KCL @ 150mL/hr",
     IVF_dextrose: "IV Fluids with Dextrose",
@@ -446,6 +438,13 @@ function formatTreatmentName(key: string): string {
     folic_acid: "Folic Acid 1mg PO daily",
     multivitamin: "Multivitamin IV daily",
     banana_bag: "Banana Bag (MVI + Thiamine + Folate in NS)",
+    // HSV-HLH case treatments
+    empiric_abx: "Empiric Antibiotics (Pip-Tazo 4.5g IV q6h)",
+    anakinra: "Anakinra 100mg SC daily (IL-1 receptor antagonist)",
+    dexamethasone: "Dexamethasone 40mg IV daily",
+    acyclovir: "Acyclovir 10mg/kg IV q8h",
+    NS_bolus: "Normal Saline 1L bolus",
+    vasopressors: "Norepinephrine drip",
   };
   return names[key] ?? key;
 }

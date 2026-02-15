@@ -74,6 +74,12 @@ export async function POST(request: Request) {
       simTime: 0,
       startRealTime: now.toISOString(),
       timeScale: 20,
+      patient: {
+        name: scenario.patient.name,
+        age: scenario.patient.age,
+        sex: scenario.patient.sex,
+        chiefComplaint: scenario.patient.chiefComplaint,
+      },
     });
   } catch (error) {
     console.error("Game start error:", error);

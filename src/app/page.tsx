@@ -17,6 +17,20 @@ const scenarios = [
       "Wernicke's Encephalopathy Risk",
     ],
   },
+  {
+    id: "hsv-hlh-dead-gut",
+    title: "HSV Acute Liver Failure c/b HLH & Dead Gut",
+    description:
+      "34F on Skyrizi (IL-23 inhibitor) for RA, presenting with large bowel obstruction that evolves into HSV-related acute liver failure complicated by HLH, then bowel ischemia. 3-phase case with escalating severity.",
+    difficulty: "Advanced",
+    duration: "45-60 min",
+    conditions: [
+      "Large Bowel Obstruction",
+      "Acute Liver Failure (HSV)",
+      "HLH",
+      "Bowel Ischemia",
+    ],
+  },
 ];
 
 export default function HomePage() {

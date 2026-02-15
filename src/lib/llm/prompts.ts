@@ -136,11 +136,15 @@ export function buildParseSystemPrompt(scenario: Scenario): string {
   const consultKeys = Object.keys(scenario.consults);
   const procedureKeys = Object.keys(scenario.procedures);
 
+  const treatmentKeyList = scenario.treatmentKeys
+    ? Object.entries(scenario.treatmentKeys).map(([k, v]) => `${k} (${v})`).join(", ")
+    : "NS_bolus (normal saline bolus)";
+
   return `You are a medical command parser for a simulation game. Parse the doctor's free-text input into structured actions.
 
 AVAILABLE ACTIONS:
 - order_lab: Order a lab test. Keys: ${labKeys.join(", ")}
-- start_treatment: Start a treatment. Common keys: PPI, D5NS_20KCL, IVF_dextrose, thiamine_high_dose, folic_acid, multivitamin, banana_bag, NS_bolus (normal saline bolus)
+- start_treatment: Start a treatment. Keys: ${treatmentKeyList}
 - stop_treatment: Stop a treatment.
 - consult: Request a specialist consult. Keys: ${consultKeys.join(", ")}
 - check_vitals: Check current vital signs.
@@ -152,11 +156,17 @@ AVAILABLE ACTIONS:
 - end_game: End the simulation.
 
 RULES:
-- A single input may map to MULTIPLE actions (e.g., "order CBC, BMP, and start a PPI drip" = 3 actions)
+- A single input may map to MULTIPLE actions (e.g., "order CBC, BMP, and start antibiotics" = 3 actions)
 - For ambiguous inputs, pick the most likely action
 - "Talk to patient" or any direct question → ask_patient
 - "Examine the abdomen" → physical_exam with system
+- "Give acyclovir" or "start acyclovir" → start_treatment:acyclovir
+- "Give anakinra" → start_treatment:anakinra
+- "Start antibiotics" or "empiric antibiotics" or "pip-tazo" → start_treatment:empiric_abx
 - "Give thiamine" or "start thiamine" → start_treatment:thiamine_high_dose
+- "Start a PPI" or "pantoprazole" → start_treatment:PPI
+- "Bolus" or "give fluids" or "normal saline bolus" → start_treatment:NS_bolus
+- "Start pressors" or "vasopressors" or "norepinephrine" → start_treatment:vasopressors
 - "Order labs" without specifics → ask_patient (doctor needs to be specific)
 - "Check on the patient" → check_vitals + physical_exam:general`;
 }

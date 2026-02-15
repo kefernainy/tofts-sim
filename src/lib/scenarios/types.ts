@@ -1,6 +1,7 @@
 export interface Scenario {
   id: string;
   title: string;
+  treatmentKeys?: Record<string, string>;
   patient: PatientFacts;
   labs: Record<string, LabDefinition>;
   labsOverTime: Record<string, LabOverTimeEntry[]>;

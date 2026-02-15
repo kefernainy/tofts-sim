@@ -1,0 +1,350 @@
+{
+  "id": "hsv-hlh-dead-gut",
+  "title": "HSV Acute Liver Failure c/b HLH & Dead Gut",
+
+  "treatmentKeys": {
+    "empiric_abx": "Empiric Antibiotics (Pip-Tazo 4.5g IV q6h)",
+    "anakinra": "Anakinra 100mg SC daily (IL-1 receptor antagonist)",
+    "dexamethasone": "Dexamethasone 40mg IV daily",
+    "acyclovir": "Acyclovir 10mg/kg IV q8h",
+    "NS_bolus": "Normal Saline 1L bolus",
+    "vasopressors": "Norepinephrine drip"
+  },
+
+  "patient": {
+    "name": "Sarah Chen",
+    "age": 34,
+    "sex": "F",
+    "personality": "Anxious, asks a lot of questions. Cooperative. Worried about missing work. Asks 'is this serious?' frequently.",
+    "chiefComplaint": "Abdominal pain, hasn't had a bowel movement in 4 days",
+    "presentingNarrative": "A 34-year-old woman presents to the ED with worsening abdominal pain and constipation for 4 days. She appears uncomfortable, clutching her abdomen, and is visibly anxious.",
+    "history": {
+      "hpiDetails": "Abdominal pain started 4 days ago, progressively worsening. No bowel movements in that time. Some nausea but no vomiting. Pain is diffuse, crampy, worse in the left lower quadrant. Has been bloated and unable to pass gas since yesterday.",
+      "medications": "Skyrizi (risankizumab) for rheumatoid arthritis — started 6 months ago. Sertraline 100mg daily for anxiety/depression. Metformin 500mg BID for PCOS.",
+      "allergies": "Sulfa drugs — causes rash",
+      "pmh": "Anxiety, depression, PCOS, rheumatoid arthritis diagnosed 2 years ago. Previously tried methotrexate — stopped due to nausea.",
+      "surgicalHistory": "Appendectomy age 16. No other surgeries.",
+      "socialHistory": "Works as a graphic designer. Lives with partner. Non-smoker, occasional wine. No recreational drugs.",
+      "familyHistory": "Mother has lupus. Father had colon cancer at 62.",
+      "immunosuppressantDetails": "Risankizumab (Skyrizi) — IL-23 inhibitor, self-inject every 12 weeks. Last injection was 3 weeks ago. Aware it suppresses her immune system.",
+      "infectionHistory": "Gets cold sores occasionally — last one about 2 months ago. No recent sick contacts. No recent travel.",
+      "bowelHabits": "Normally regular, once daily. This is very unusual for her. Last normal BM was 5 days ago.",
+      "autoimmune": "RA diagnosed 2 years ago. Mainly affects hands and knees. Currently well-controlled on Skyrizi."
+    },
+    "physicalExamFindings": {
+      "general": "Alert, anxious-appearing woman in mild distress, clutching abdomen",
+      "heent": "Moist mucous membranes, no scleral icterus, no lymphadenopathy",
+      "cardiovascular": "Tachycardic, regular rhythm, no murmurs, capillary refill <2 seconds",
+      "pulmonary": "Clear to auscultation bilaterally, no respiratory distress",
+      "abdomen": "Distended, tympanic to percussion, diffuse tenderness worse in LLQ, no rebound or guarding, decreased bowel sounds",
+      "rectal": "Empty rectal vault, no masses, no blood",
+      "extremities": "No edema, mild MCP joint swelling bilaterally (baseline RA)",
+      "neuro": "Alert and oriented x4, no focal deficits",
+      "skin": "Warm, dry, no rashes, no jaundice"
+    },
+    "initialVitals": { "hr": 98, "bp": "128/78", "rr": 18, "temp": 37.8, "spo2": 98 }
+  },
+
+  "labs": {
+    "CBC": { "values": { "WCC": "23 x10^9/L", "Hb": "11 g/dL", "Plt": "112 x10^9/L" }, "turnaroundMinutes": 30 },
+    "BMP": { "values": { "Na": 135, "K": 4.0, "Cl": 115, "HCO3": 24, "BUN": 20, "Cr": 0.8, "Glucose": 123 }, "turnaroundMinutes": 30 },
+    "LFTs": { "values": { "AST": 32, "ALT": 28, "ALP": 85, "Tbili": 0.8, "Albumin": 3.5 }, "turnaroundMinutes": 30 },
+    "Lactate": { "values": { "Lactate": 1.8 }, "turnaroundMinutes": 15 },
+    "CT_abdomen_pelvis": { "values": { "findings": "Large bowel obstruction at sigmoid colon. No free air. Moderate proximal dilation. No evidence of volvulus or mass lesion." }, "turnaroundMinutes": 45 },
+    "AXR": { "values": { "findings": "Dilated large bowel loops with air-fluid levels. No free air under diaphragm." }, "turnaroundMinutes": 15 },
+    "Tylenol_level": { "values": { "Acetaminophen": "undetectable" }, "turnaroundMinutes": 30 },
+    "Blood_cultures": { "values": { "status": "pending — final result in 48 hours" }, "turnaroundMinutes": 120 },
+    "Karius": { "values": { "result": "HSV-1 detected" }, "turnaroundMinutes": 90 },
+    "HSV_panel": { "values": { "HSV1_IgM": "positive", "HSV1_PCR": "positive", "HSV2_IgM": "negative", "HSV2_PCR": "negative" }, "turnaroundMinutes": 60 },
+    "CMV_EBV": { "values": { "CMV_IgM": "negative", "EBV_VCA_IgM": "negative" }, "turnaroundMinutes": 60 },
+    "HIV": { "values": { "HIV_screen": "Non-reactive" }, "turnaroundMinutes": 30 },
+    "Ferritin": { "values": { "Ferritin": 92500 }, "turnaroundMinutes": 45 },
+    "Triglycerides": { "values": { "Triglycerides": 293 }, "turnaroundMinutes": 30 },
+    "Fibrinogen": { "values": { "Fibrinogen": 95 }, "turnaroundMinutes": 30 },
+    "LDH": { "values": { "LDH": 2800 }, "turnaroundMinutes": 30 },
+    "IL2R": { "values": { "sIL2R": ">10,000 U/mL (markedly elevated)" }, "turnaroundMinutes": 120 },
+    "Coags": { "values": { "PT": 18.5, "INR": 1.6, "PTT": 42 }, "turnaroundMinutes": 30 },
+    "TypeAndScreen": { "values": { "type": "A positive", "screen": "negative" }, "turnaroundMinutes": 45 }
+  },
+
+  "labsOverTime": {
+    "CBC": [
+      { "afterMinutes": 180, "ifTreated": false, "values": { "WCC": "0.1 x10^9/L", "Hb": "7 g/dL", "Plt": "98 x10^9/L" } },
+      { "afterMinutes": 180, "ifTreated": true, "values": { "WCC": "0.1 x10^9/L", "Hb": "7 g/dL", "Plt": "98 x10^9/L" } },
+      { "afterMinutes": 360, "ifTreated": false, "values": { "WCC": "0.3 x10^9/L", "Hb": "6.5 g/dL", "Plt": "45 x10^9/L" } },
+      { "afterMinutes": 360, "ifTreated": true, "values": { "WCC": "0.3 x10^9/L", "Hb": "6.5 g/dL", "Plt": "45 x10^9/L" } }
+    ],
+    "BMP": [
+      { "afterMinutes": 180, "ifTreated": false, "values": { "Na": 139, "K": 4.5, "Cl": 110, "HCO3": 19, "BUN": 24, "Cr": 0.9, "Glucose": 125 } },
+      { "afterMinutes": 180, "ifTreated": true, "values": { "Na": 139, "K": 4.5, "Cl": 110, "HCO3": 19, "BUN": 24, "Cr": 0.9, "Glucose": 125 } },
+      { "afterMinutes": 360, "ifTreated": false, "values": { "Na": 141, "K": 5.8, "Cl": 108, "HCO3": 12, "BUN": 38, "Cr": 1.8, "Glucose": 95 } },
+      { "afterMinutes": 360, "ifTreated": true, "values": { "Na": 141, "K": 5.2, "Cl": 108, "HCO3": 16, "BUN": 32, "Cr": 1.4, "Glucose": 105 } }
+    ],
+    "LFTs": [
+      { "afterMinutes": 180, "ifTreated": false, "values": { "AST": ">5000", "ALT": ">2000", "ALP": 220, "Tbili": 4.8, "Albumin": 2.8 } },
+      { "afterMinutes": 180, "ifTreated": true, "values": { "AST": ">5000", "ALT": ">2000", "ALP": 220, "Tbili": 4.8, "Albumin": 2.8 } },
+      { "afterMinutes": 360, "ifTreated": false, "values": { "AST": ">8000", "ALT": ">4000", "ALP": 280, "Tbili": 8.2, "Albumin": 2.2 } },
+      { "afterMinutes": 360, "ifTreated": true, "values": { "AST": 1200, "ALT": 800, "ALP": 180, "Tbili": 3.5, "Albumin": 2.9 } }
+    ],
+    "Lactate": [
+      { "afterMinutes": 180, "ifTreated": false, "values": { "Lactate": 4.5 } },
+      { "afterMinutes": 180, "ifTreated": true, "values": { "Lactate": 4.5 } },
+      { "afterMinutes": 360, "ifTreated": false, "values": { "Lactate": 10 } },
+      { "afterMinutes": 360, "ifTreated": true, "values": { "Lactate": 8 } }
+    ],
+    "Ferritin": [
+      { "afterMinutes": 360, "ifTreated": true, "values": { "Ferritin": 1162 } },
+      { "afterMinutes": 360, "ifTreated": false, "values": { "Ferritin": 120000 } },
+      { "afterMinutes": 480, "ifTreated": true, "values": { "Ferritin": 635 } },
+      { "afterMinutes": 480, "ifTreated": false, "values": { "Ferritin": 150000 } },
+      { "afterMinutes": 600, "ifTreated": true, "values": { "Ferritin": 500 } },
+      { "afterMinutes": 600, "ifTreated": false, "values": { "Ferritin": 180000 } }
+    ],
+    "CT_abdomen_pelvis": [
+      { "afterMinutes": 360, "ifTreated": false, "values": { "findings": "Diffuse pan-colitis with pneumatosis intestinalis. Concern for ischemic bowel. Portal venous gas noted." } },
+      { "afterMinutes": 360, "ifTreated": true, "values": { "findings": "Diffuse pan-colitis with pneumatosis intestinalis. Concern for ischemic bowel. Portal venous gas noted." } }
+    ]
+  },
+
+  "consults": {
+    "GI": { "responseDelayMinutes": 30, "outcome": "GI recommends sigmoidectomy with decompression. They can perform this within the hour if patient is stable." },
+    "Surgery": { "responseDelayMinutes": 20, "outcome": "Surgery is available. They recommend subtotal colectomy given extent of disease. OR can be ready in 30 minutes." },
+    "ICU": { "responseDelayMinutes": 15, "outcome": "ICU accepts the patient for close monitoring given evolving multi-organ pathology." },
+    "Hematology": { "responseDelayMinutes": 45, "outcome": "Hematology reviewed labs. Agrees with HLH diagnosis by H-Score criteria. Recommends anakinra and dexamethasone." },
+    "Hepatology": { "responseDelayMinutes": 40, "outcome": "Hepatology recommends urgent workup for acute liver failure etiology. Consider HSV, autoimmune hepatitis, drug-induced. Start N-acetylcysteine empirically." }
+  },
+
+  "procedures": {
+    "sigmoidectomy": { "durationMinutes": 60, "requirements": ["GI consult placed"], "outcome": "Sigmoid decompression successful. Large stool burden evacuated. No perforation identified." },
+    "subtotal_colectomy": { "durationMinutes": 120, "requirements": ["Surgery consult placed"], "outcome": "Subtotal colectomy completed. Extensive ischemic bowel found — approximately 80% of colon non-viable. End ileostomy created." },
+    "central_line": { "durationMinutes": 30, "requirements": [] },
+    "intubation": { "durationMinutes": 15, "requirements": ["patient indicated for intubation"] }
+  },
+
+  "conditions": [
+    {
+      "id": "lbo",
+      "name": "Large Bowel Obstruction",
+      "initialState": "presenting",
+      "states": ["presenting", "workup", "treated", "resolved", "worsening"],
+      "transitions": [
+        {
+          "from": "presenting",
+          "to": "workup",
+          "trigger": { "type": "any_action", "actions": ["order_lab:CBC", "order_lab:CT_abdomen_pelvis", "order_lab:AXR"] }
+        },
+        {
+          "from": ["presenting", "workup"],
+          "to": "treated",
+          "trigger": { "type": "all_actions", "actions": ["consult:GI", "start_treatment:empiric_abx"] }
+        },
+        {
+          "from": "treated",
+          "to": "resolved",
+          "trigger": { "type": "procedure_completed", "procedure": "sigmoidectomy" }
+        },
+        {
+          "from": ["presenting", "workup"],
+          "to": "worsening",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 180 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 25,
+        "criteria": [
+          { "type": "action_taken", "action": "order_lab:CT_abdomen_pelvis", "points": 5, "label": "CT abdomen/pelvis ordered" },
+          { "type": "action_taken", "action": "order_lab:CBC", "points": 2, "label": "CBC ordered" },
+          { "type": "action_taken", "action": "order_lab:BMP", "points": 1, "label": "BMP ordered" },
+          { "type": "action_taken", "action": "start_treatment:empiric_abx", "points": 5, "label": "Empiric antibiotics started" },
+          { "type": "action_taken", "action": "consult:GI", "points": 5, "label": "GI consult placed" },
+          { "type": "action_taken", "action": "procedure:sigmoidectomy", "points": 7, "label": "Sigmoidectomy performed" }
+        ]
+      }
+    },
+    {
+      "id": "acute_liver_failure",
+      "name": "Acute Liver Failure (HSV)",
+      "initialState": "latent",
+      "states": ["latent", "presenting", "workup", "hsv_identified", "treated", "worsening", "dead"],
+      "transitions": [
+        {
+          "from": "latent",
+          "to": "presenting",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 180 }
+        },
+        {
+          "from": "presenting",
+          "to": "workup",
+          "trigger": { "type": "any_action", "actions": ["order_lab:LFTs", "order_lab:Tylenol_level"] }
+        },
+        {
+          "from": ["presenting", "workup"],
+          "to": "hsv_identified",
+          "trigger": { "type": "any_action", "actions": ["order_lab:HSV_panel", "order_lab:Karius"] }
+        },
+        {
+          "from": ["presenting", "workup", "hsv_identified"],
+          "to": "treated",
+          "trigger": { "type": "action_taken", "actions": ["start_treatment:acyclovir"] }
+        },
+        {
+          "from": ["presenting", "workup", "hsv_identified"],
+          "to": "worsening",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 300 }
+        },
+        {
+          "from": "worsening",
+          "to": "treated",
+          "trigger": { "type": "action_taken", "actions": ["start_treatment:acyclovir"] }
+        },
+        {
+          "from": "worsening",
+          "to": "dead",
+          "trigger": { "type": "time_elapsed_in_state", "afterMinutes": 120 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 40,
+        "criteria": [
+          { "type": "action_taken", "action": "order_lab:HSV_panel", "points": 8, "label": "Ordered HSV panel" },
+          { "type": "action_taken", "action": "order_lab:Ferritin", "points": 5, "label": "Ordered Ferritin" },
+          { "type": "action_taken", "action": "order_lab:Triglycerides", "points": 5, "label": "Recognized HLH — ordered Triglycerides" },
+          { "type": "action_taken", "action": "start_treatment:acyclovir", "points": 8, "label": "Started Acyclovir" },
+          { "type": "action_taken", "action": "start_treatment:anakinra", "points": 8, "label": "Started Anakinra for HLH" },
+          { "type": "action_taken", "action": "start_treatment:dexamethasone", "points": 3, "label": "Added Dexamethasone" },
+          { "type": "state_avoided", "state": "dead", "points": 3, "label": "Avoided patient death from liver failure" }
+        ]
+      }
+    },
+    {
+      "id": "hlh",
+      "name": "Hemophagocytic Lymphohistiocytosis (HLH)",
+      "initialState": "unrecognized",
+      "states": ["unrecognized", "suspected", "diagnosed", "treated", "responding", "untreated_fatal"],
+      "transitions": [
+        {
+          "from": "unrecognized",
+          "to": "suspected",
+          "trigger": { "type": "any_action", "actions": ["order_lab:Ferritin"] }
+        },
+        {
+          "from": "suspected",
+          "to": "diagnosed",
+          "trigger": { "type": "any_action", "actions": ["order_lab:Triglycerides", "order_lab:Fibrinogen", "order_lab:IL2R"] }
+        },
+        {
+          "from": ["suspected", "diagnosed"],
+          "to": "treated",
+          "trigger": { "type": "action_taken", "actions": ["start_treatment:anakinra"] }
+        },
+        {
+          "from": "treated",
+          "to": "responding",
+          "trigger": { "type": "action_taken", "actions": ["start_treatment:dexamethasone"] }
+        },
+        {
+          "from": ["unrecognized", "suspected"],
+          "to": "untreated_fatal",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 480 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 0,
+        "criteria": []
+      }
+    },
+    {
+      "id": "bowel_ischemia",
+      "name": "Bowel Ischemia / Dead Gut",
+      "initialState": "latent",
+      "states": ["latent", "presenting", "surgery_consulted", "resolved", "dead"],
+      "transitions": [
+        {
+          "from": "latent",
+          "to": "presenting",
+          "trigger": { "type": "time_elapsed", "afterMinutes": 360 }
+        },
+        {
+          "from": "presenting",
+          "to": "surgery_consulted",
+          "trigger": { "type": "action_taken", "actions": ["consult:Surgery"] }
+        },
+        {
+          "from": "surgery_consulted",
+          "to": "resolved",
+          "trigger": { "type": "procedure_completed", "procedure": "subtotal_colectomy" }
+        },
+        {
+          "from": "presenting",
+          "to": "dead",
+          "trigger": { "type": "time_elapsed_in_state", "afterMinutes": 60 }
+        }
+      ],
+      "scoring": {
+        "maxPoints": 35,
+        "criteria": [
+          { "type": "action_taken", "action": "order_lab:Lactate", "points": 5, "label": "Ordered repeat lactate" },
+          { "type": "action_taken", "action": "order_lab:CT_abdomen_pelvis", "points": 5, "label": "Ordered repeat imaging" },
+          { "type": "action_taken", "action": "consult:Surgery", "points": 10, "label": "Surgery consult placed" },
+          { "type": "action_taken", "action": "procedure:subtotal_colectomy", "points": 10, "label": "Subtotal colectomy performed" },
+          { "type": "state_avoided", "state": "dead", "points": 5, "label": "Patient survives" }
+        ]
+      }
+    }
+  ],
+
+  "events": [
+    {
+      "id": "initial_presentation",
+      "trigger": { "type": "game_start" },
+      "facts": "A 34-year-old woman is in the ED bed, visibly uncomfortable and clutching her distended abdomen. She looks anxious and is asking the nurse if everything is going to be okay. The triage vitals sheet is clipped to the bed."
+    },
+    {
+      "id": "phase2_onset",
+      "trigger": { "type": "time_elapsed", "atMinute": 180 },
+      "facts": "The patient is now complaining of increasing abdominal pain beyond her baseline. The nurse pages you urgently — new labs are markedly abnormal. The patient appears more ill, with new-onset fever and tachycardia. She says she feels 'really wrong, like something bad is happening inside me.'",
+      "vitalsChange": { "hr": 110, "bp": "100/60", "temp": 38.9, "rr": 22 }
+    },
+    {
+      "id": "ferritin_shock",
+      "trigger": { "type": "condition_enters_state", "condition": "hlh", "state": "suspected" },
+      "facts": "The nurse flags a critical lab result: Ferritin has come back at 92,500. She double-checks — 'Doctor, this can't be right, can it? That's astronomically high.' The lab confirms the result is accurate."
+    },
+    {
+      "id": "phase2_worsening",
+      "trigger": { "type": "condition_enters_state", "condition": "acute_liver_failure", "state": "worsening" },
+      "facts": "The patient is becoming encephalopathic — confused, unable to follow commands consistently. She is now visibly jaundiced. Her abdomen is more tender. The nurse reports urine output has dropped significantly.",
+      "vitalsChange": { "hr": 125, "bp": "88/52", "temp": 39.2, "spo2": 94 }
+    },
+    {
+      "id": "phase3_onset",
+      "trigger": { "type": "time_elapsed", "atMinute": 360 },
+      "facts": "The patient's abdominal pain is dramatically worsening. Her abdomen is now rigid and board-like. The lactic acid is climbing rapidly. She is moaning in pain and becoming increasingly obtunded.",
+      "vitalsChange": { "hr": 130, "bp": "82/48", "rr": 28, "spo2": 92 }
+    },
+    {
+      "id": "phase3_no_surgery",
+      "trigger": { "type": "condition_enters_state", "condition": "bowel_ischemia", "state": "dead" },
+      "facts": "The patient goes into hemodynamic collapse. Despite vasopressor support, blood pressure is unrecordable. She progresses to PEA cardiac arrest. Resuscitation efforts are unsuccessful. Time of death called.",
+      "vitalsChange": { "hr": 0, "bp": "0/0", "rr": 0, "spo2": 0 }
+    },
+    {
+      "id": "gi_consult_arrives",
+      "trigger": { "type": "consult_response", "consult": "GI" },
+      "facts": "The GI attending arrives and reviews the imaging. They recommend sigmoidectomy with decompression and can perform it within the hour if the patient is hemodynamically stable."
+    },
+    {
+      "id": "surgery_consult_arrives",
+      "trigger": { "type": "consult_response", "consult": "Surgery" },
+      "facts": "The surgical team arrives and examines the patient. Given the extent of bowel involvement on imaging, they recommend proceeding directly to subtotal colectomy. The OR can be ready within 30 minutes."
+    }
+  ],
+
+  "scoredHistoryItems": [
+    { "id": "asked_about_medications", "keywords": ["medication", "medicine", "skyrizi", "risankizumab", "biologic", "immunosuppressant", "immunosuppression", "what do you take", "prescriptions"], "points": 5, "label": "Asked about medications/immunosuppressants" },
+    { "id": "asked_about_bowel_habits", "keywords": ["bowel", "constipation", "stool", "last bowel movement", "poop", "gas", "flatus", "bowel movement"], "points": 3, "label": "Asked about bowel habits" },
+    { "id": "asked_about_surgeries", "keywords": ["surgery", "operation", "prior procedure", "surgical history", "appendix", "appendectomy"], "points": 2, "label": "Asked about prior surgeries" },
+    { "id": "asked_about_infections", "keywords": ["infection", "sick", "fever", "cold sore", "herpes", "hsv", "blister", "sick contact", "exposure"], "points": 3, "label": "Asked about infections/sick contacts" },
+    { "id": "asked_about_autoimmune", "keywords": ["arthritis", "autoimmune", "rheumatoid", "joints", "joint pain", "ra", "lupus"], "points": 2, "label": "Asked about autoimmune history" }
+  ]
+}

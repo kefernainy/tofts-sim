@@ -17,6 +17,12 @@ interface GameInitData {
   simTime: number;
   startRealTime: string;
   timeScale: number;
+  patient: {
+    name: string;
+    age: number;
+    sex: string;
+    chiefComplaint: string;
+  };
 }
 
 export default function GamePage() {
@@ -78,10 +84,10 @@ export default function GamePage() {
       initialSimTime={initData.simTime}
       startRealTime={initData.startRealTime}
       timeScale={initData.timeScale}
-      patientName="Robert Malloy"
-      patientAge={47}
-      patientSex="M"
-      chiefComplaint="Vomiting and rectal bleeding"
+      patientName={initData.patient.name}
+      patientAge={initData.patient.age}
+      patientSex={initData.patient.sex}
+      chiefComplaint={initData.patient.chiefComplaint}
     />
   );
 }
